@@ -2,7 +2,7 @@ import time
 
 from AlphaProof import Client
 
-API_KEY = "QWTI6SY9U1IH823MQJHU"
+API_KEY = "--API--KEY--"
 BASE_URL = "http://127.0.0.1:5000/"
 
 TIME_OPEN = "16:11 CEST"
@@ -23,7 +23,7 @@ def main():
     response = client.open_commits()
     print("\n" + str(response))
 
-    response = client.reveal(2)
+    response = client.reveal()
     print("\n" + str(response))
     time.sleep(90)  # wait for transaction to be mined
 
