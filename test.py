@@ -3,7 +3,7 @@ import time
 from AlphaProof import Client
 
 API_KEY = "--API--KEY--"
-BASE_URL = "http://127.0.0.1:5000/"
+BASE_URL = "http://178.62.81.124:5000/"
 
 TIME_OPEN = "16:11 CEST"
 PRICE_OPEN = str(6725.0)
