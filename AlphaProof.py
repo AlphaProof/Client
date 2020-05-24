@@ -57,7 +57,7 @@ class Client():
         Args:
             signal (str): the signal either BUY, SELL or STOP
             price_open (str): the price at which the trade was opend
-            exchange (str): the exchange on which the trade was executed ("binance" | "bitstamp")
+            exchange (str): the exchange on which the trade was executed
             time_open (str): the time at which the trade was opend, compatible with https://pypi.org/project/dateparser/
 
         Returns:
@@ -69,9 +69,6 @@ class Client():
 
         if signal != "BUY" and signal != "SELL" and signal != "STOP":
             return {'message': 'Needs to be one of BUY, SELL, STOP'}
-
-        if exchange != "binance" and exchange != "bitstamp":
-            return {'message': 'Needs to be "binance" or "bitstamp" '}
 
         url_commit_normal = self.base_url + "commit"
 
@@ -124,7 +121,7 @@ class Client():
         Args:
             signal (str): the signal either BUY, SELL or STOP
             price_open (str): the price at which the trade was opend
-            exchange (str): the exchange on which the trade was executed ("binance" | "bitstamp")
+            exchange (str): the exchange on which the trade was executed
             time_open (str): the time at which the trade was opend, compatible with https://pypi.org/project/dateparser/
 
         Returns:
@@ -139,8 +136,6 @@ class Client():
         if signal != "BUY" and signal != "SELL" and signal != "STOP":
             return {'message': 'Needs to be one of BUY, SELL, STOP'}
 
-        if exchange != "binance" and exchange != "bitstamp":
-            return {'message': 'Needs to be "binance" or "bitstamp" '}
 
         url_commit = self.base_url + "commit_encrypted"
 
@@ -177,7 +172,7 @@ class Client():
             encryption_key (str): the key returend by `commit_encrypted`
             signal (str): the signal either BUY, SELL or STOP
             price_open (str): the price at which the trade was opend
-            exchange (str): the exchange on which the trade was executed ("binance" | "bitstamp")
+            exchange (str): the exchange on which the trade was executed
             time_open (str): the time at which the trade was opend, compatible with https://pypi.org/project/dateparser/
             index (int, default=0): the index of where the commit is in the list returned by `open_commits`
 
@@ -190,9 +185,6 @@ class Client():
 
         if signal != "BUY" and signal != "SELL" and signal != "STOP":
             return {'message': 'Needs to be one of BUY, SELL, STOP'}
-
-        if exchange != "binance" and exchange != "bitstamp":
-            return {'message': 'Needs to be "binance" or "bitstamp" '}
 
         url_reveal_encr = self.base_url + "reveal_encrypted"
 
